@@ -43,6 +43,8 @@ local function create_window()
         borderchars = borderchars,
     })
 
+    vim.api.nvim_buf_set_keymap(bufnr, 'n', '<esc>', '<cmd>q!<cr>', { noremap = true})
+
     vim.api.nvim_win_set_option(
         win.border.win_id,
         "winhl",
